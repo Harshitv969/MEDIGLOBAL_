@@ -38,9 +38,8 @@ function Navbar() {
   return (
     <>
       <div
-        className={`hidden md:block transition-all duration-300 ease-in-out ${
-          scrolled ? 'max-h-0 py-0 opacity-0' : 'max-h-10 py-1.5 opacity-100'
-        } overflow-hidden`}
+        className={`hidden md:block transition-all duration-300 ease-in-out ${scrolled ? 'max-h-0 py-0 opacity-0' : 'max-h-10 py-1.5 opacity-100'
+          } overflow-hidden`}
         style={{ background: 'linear-gradient(90deg,#0f766e,#0d9488)' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-white text-[11px] tracking-wide">
@@ -57,15 +56,14 @@ function Navbar() {
       </div>
 
       <nav
-        className={`sticky top-0 z-50 transition-all duration-300 ease-in-out border-b ${
-          scrolled
+        className={`sticky top-0 z-50 transition-all duration-300 ease-in-out border-b ${scrolled
             ? 'bg-white/85 backdrop-blur-xl shadow-lg border-teal-100/60'
             : 'bg-white/95 backdrop-blur-md shadow-none border-gray-100'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[72px]">
-            
+
             <Link to="/" className="flex items-center shrink-0">
               <img
                 src="/logo.png"
@@ -79,20 +77,17 @@ function Navbar() {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className={`relative px-4 py-2 text-[13px] font-medium tracking-wide rounded-lg transition-all duration-200 group ${
-                    isActive(link.href) ? 'text-teal-700' : 'text-gray-500 hover:text-teal-700'
-                  }`}
+                  className={`relative px-4 py-2 text-[13px] font-medium tracking-wide rounded-lg transition-all duration-200 group ${isActive(link.href) ? 'text-teal-700' : 'text-gray-500 hover:text-teal-700'
+                    }`}
                 >
                   <span
-                    className={`absolute inset-0 rounded-lg transition-all duration-200 ${
-                      isActive(link.href) ? 'bg-teal-50/80' : 'bg-transparent group-hover:bg-teal-50/60'
-                    }`}
+                    className={`absolute inset-0 rounded-lg transition-all duration-200 ${isActive(link.href) ? 'bg-teal-50/80' : 'bg-transparent group-hover:bg-teal-50/60'
+                      }`}
                   />
                   <span className="relative z-10">{link.label}</span>
                   <span
-                    className={`absolute bottom-0.5 left-1/2 -translate-x-1/2 h-[2px] rounded-full transition-all duration-300 ease-out ${
-                      isActive(link.href) ? 'w-5/6 opacity-100' : 'w-0 opacity-0 group-hover:w-5/6 group-hover:opacity-100'
-                    }`}
+                    className={`absolute bottom-0.5 left-1/2 -translate-x-1/2 h-[2px] rounded-full transition-all duration-300 ease-out ${isActive(link.href) ? 'w-5/6 opacity-100' : 'w-0 opacity-0 group-hover:w-5/6 group-hover:opacity-100'
+                      }`}
                     style={{ background: 'linear-gradient(90deg,#0f766e,#14b8a6)' }}
                   />
                 </Link>
@@ -113,7 +108,7 @@ function Navbar() {
               <Link
                 to="/contact"
                 className="relative px-5 py-2 text-xs font-semibold rounded-lg text-white overflow-hidden group transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(20,184,166,0.4)]"
-                style={{ background: 'linear-gradient(135deg,#0f766e,#14b8a6)' }}
+                style={{ background: 'linear-gradient(135deg,#b91c1c,#ef4444)' }}
               >
                 <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white transition-opacity duration-300" />
                 <span className="relative z-10">Contact Us</span>
@@ -137,11 +132,10 @@ function Navbar() {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className={`flex items-center px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
-                    isActive(link.href)
+                  className={`flex items-center px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${isActive(link.href)
                       ? 'text-teal-700 bg-teal-50'
                       : 'text-gray-600 hover:text-teal-700 hover:bg-teal-50/60'
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
